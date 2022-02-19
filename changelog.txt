@@ -1,0 +1,262 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 02-19-2022
+  Changes: 
+   - Added K2 Fuel to Companion Drones if present  
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 01-08-2022
+  Changes: 
+   - Removed a lot of code that is no longer needed. Mostly stuff from 0.1.26.
+   - Added landfill recipes for Raw rare metals and Raw-imersite.  
+---------------------------------------------------------------------------------------------------
+Version: 0.1.26
+Date: 01-04-2022
+  Changes: 
+   - Disabled Radioactivity with Nuclear Fuel as it's now core with Krastorio 2.
+   - Reverted stack size for Engine and Electric Engines
+   - Reverted stack size for Rocket fuel due to changes with fuel value 
+   - Disabled Adaptive armour category fix now core with Space Exploration
+   - Disabled verious tech changes due to better placement in the tech tree overall.
+   - Disabled various sub group changes due to going core with Space Expolration
+   - Disable Singularity lab tweaks went core with Space Expolration
+   - Now requires version 1.2.10 of Krastorio 2
+   - Moved K2 building tweaks to it own mod for ease of enabling and disabling.  
+---------------------------------------------------------------------------------------------------
+Version: 0.1.25
+Date: 12-09-2021
+  Changes: 
+    - Made stacksize for larger lamps only apply when Deadlocks Larger Lamps is active.
+    - Change ingredients for items with solid fuel from the Aircraft mod and the AAI: Laser tank mod to use K2 fuel instead.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.24
+Date: 11-04-2021
+  Changes:
+    - Changed graphic path for K2 1.2
+    - Now requires version 1.2 of Krastorio 2
+    - Added support for Spidertron extended se
+    - Removed incompatibility with noble's se tweaks (conflicting settings can be disabled)
+    - Changed radioactive code in Control.lua due to control rewrite on K2's side. 
+  Fixes: 
+    - Change of data_util path to fix crash on startup.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.23
+Date: 09-02-2021
+  Changes: 
+    - Made the Mk3 miner work on hard resources (it's a mini version stats wise)
+    - Removed setting for AAI Area Miner due to Hard resources update. 
+---------------------------------------------------------------------------------------------------
+Version: 0.1.22
+Date: 07-26-2021
+  Changes: 
+    - Changed SE's radar pylon's to use advance radar
+    - Removed setting for K2 intermedites as it wasn't working.
+  Fixes:
+    - Fixed edge case with deadlock's beltbox being disabled
+    - Changed local util files and functions for updated bz mods
+---------------------------------------------------------------------------------------------------
+Version: 0.1.21
+Date: 07-04-2021
+  Changes: 
+    - Added recipe changes to use K2 beam intermedites.
+  Fixes:
+    - Fixed error if AAI Containers is not present.  
+---------------------------------------------------------------------------------------------------
+Version: 0.1.20
+Date: 06-24-2021
+  Changes: 
+    - Fixed subgroups with K2 to be placed within SE subgroups. (With some code from SE with Earendel's permission.)
+    - Reduced stack size of lamps to half of set stack size.
+    - Hides Recipe from Intermediate bulk containers from player if mod is present   
+---------------------------------------------------------------------------------------------------
+Version: 0.1.19
+Date: 06-14-2021
+  Changes: 
+    - Made K2 Advanced solar panel fast replacable with SE Space solar panel (and can be walked on as a side effect).
+---------------------------------------------------------------------------------------------------
+Version: 0.1.18
+Date: 06-12-2021
+  Fixes:
+    - Fixed error if AAI area minner drill is disabled. 
+---------------------------------------------------------------------------------------------------
+Version: 0.1.17
+Date: 06-10-2021
+  Changes: 
+    - Fixed Stack Size for Rockect Fuel that Space Exploration undone. 
+---------------------------------------------------------------------------------------------------
+Version: 0.1.16
+Date: 06-04-2021
+  Changes: 
+    - Tweaked Advanced furance recipe to account for extra items with brevven's tungsten mod
+    - Based on K2+SE plan from Earendal K2 Advanced solar panel are intergrated with the SE solar upgrade path
+    - Fixed Mk5 and Mk6 SE shield not being placable in vehicles. No matching icons to go with it. 
+---------------------------------------------------------------------------------------------------
+Version: 0.1.15
+Date: 05-31-2021
+  Changes: 
+    - Intergarated Rich Rocks Requiem item stack size for K2 stack size option 
+---------------------------------------------------------------------------------------------------
+Version: 0.1.14
+Date: 05-30-2021
+  Changes: 
+    - Fixed stack size for engine, electric engine and small lamps for vanilla items.
+    - Fixed stack size for motor and electric motor for AAI Industry
+---------------------------------------------------------------------------------------------------
+Version: 0.1.13
+Date: 05-27-2021
+  Fixes:
+    - Fixed startup setting for Rich Rock Processing tech change
+---------------------------------------------------------------------------------------------------
+Version: 0.1.12
+Date: 05-23-2021
+  Fixes:
+    - Wrong setting for changing Rich Rock Processing tech
+---------------------------------------------------------------------------------------------------
+Version: 0.1.11
+Date: 05-20-2021
+  Fixes:
+    - Removed Stacked versions of radioactive item to prevent crash of radioactive script. 
+---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+Date: 05-20-2021
+  Fixes:
+    - Hotfix for wrong mods to be enabled for radioactive stacked items.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.9
+Date: 05-19-2021
+  Changes: 
+    - Removed some DSR verson specific pointers
+    - Removed Advance Assaembling Machine item limit fix
+---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 05-18-2021
+  Changes: 
+    - Fixed K2's hiding of nuclear rockect fuel that Nuclear Fuel mod is undoing
+    - Added Radioactivity to plutonium and breeder fuel cells
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 05-18-2021
+  Changes: 
+    - Removed lead from heavy machine gun turret due to brevven adding it on his end.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 05-18-2021
+  Fixes:
+    - Fixed error in changelog with Mk2 Miner
+  Changes: 
+    - Add High Pressure recipes for K2 Truce in case Deadlock Stacked Recipes
+    - Made Rich rocks processing from Rich Rock Requium require only up to Chemical tech cards and requires Advance chemistry
+    - Added setting to turn off early rich rocks processing
+    - Moved tech placement of fusion locomotive from K2 more locomotives to behind portable fusion reactor
+    - Moved tech placement of Mk2 spidertron and Immolator from Spidertron extended to behind portable fusion reactor
+    - Moved Advance Pickaxe to eariler in the tech tree
+    - Moved locale for item in TanksSEonlyTweaks to that mod
+    - Added setting to Krastorio 2 Truce to disable/enable each capsule 
+    - Added setting for Krastorio Tank Graphics
+    - Added locale for new settings
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 05-12-2021
+  Changes: 
+    - Krastorio Miner Tweaks are changes from Noble's orginal tweaks.
+    - MK3 mining drill and Big mining drill now have 6 module slots and the MK2 mining drill now have 4 module slots with Space Exploration Enabled
+    - Moved techs Energy storage and Improved pollution filter to eariler in the tech tree
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 05-09-2021
+  Changes: 
+    - Advance chemical plant now has 6 module slots with Space Exploration Enabled
+    - Singularity lab now has same speed as Space lab and 6 module slots with Space Exploration Enabled
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 05-09-2021
+  Changes: 
+    - Moved techs Logistics 5, Stacking 5, Electric energy distribution 3, and Imersite weapons to eariler in the tech tree
+    - Advance Assaembling Machine now has 6 module slots with Space Exploration Enabled  
+    - Advance Assaembling Machine has its ingredient count removed (it's set to 255 now)
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 05-08-2021
+  Changes: 
+    - Integrated noble_se_tweaks for Better MK3 Mining Drill.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 05-08-2021
+  Fixes:
+    - Fixed K2 Matter icon size
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 05-07-2021
+  Changes: 
+    - Removed Krastorio 2 Stripmine now core
+    - Removed RTG equipment from K2+SE Adaptive Armor Equipment Categories compatibility now core with K2
+    - Now requires version 1.1 of Krastorio 2
+    - Advance Furance now has 8 module slots with Space Exploration Enabled
+---------------------------------------------------------------------------------------------------
+Version: 0.0.11
+Date: 04-26-2021
+  Fixes:
+    - Fixed Advance Furance reversion.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.10
+Date: 04-18-2021
+  Changes: 
+    - Moved Krastorio 2 Advance Furance tweaks to data-updates.lua to better with Deadlock Stacked Recipes
+---------------------------------------------------------------------------------------------------
+Version: 0.0.9
+Date: 04-18-2021
+  Fixes: 
+    - Fixed Changelog
+    - Minor fix so titanium is added to Gatling Turret
+---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 04-18-2021
+  Changes: 
+    - Added ingredients to balance K2's Advance Furance. Issue was with Orbital Ion Cannon mod.
+    - Added lead to some additional turrets and K2's substation
+    - Added titanium to Gatling Turret and changed iron gears to steel gears. (Zane's Car Turret)
+---------------------------------------------------------------------------------------------------
+Version: 0.0.7
+Date: 04-02-2021
+  Changes: 
+    - Added SE RTG to universal equipment. 
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 03-31-2021
+  Changes: 
+    - Added Lancefighter's K2 SE adaptive armor patch
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 03-13-2021
+  Changes: 
+    - Moved Solid Fuel Compabilty to SETweaks
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 03-06-2021
+  Changes: 
+    - Reverted Speed nerf to K2's Advance Furance. Need more work to add ingredients to Advance Furance.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 01-24-2021
+  Changes: 
+    - Added Compatibility for Soild Fuel with Charcoal Burner and Wood Gasification to be in the correct building (fuel refinery)
+  Fixes:
+    - changed TanksK2+SETweaks to TanksK2andK2SETweaks due to upload issues
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 01-22-2021
+  Changes:
+    - Adds titles of mod origin 
+    - Add Krastorio Tank Graphics by MrFactorio
+    - Adds Krastorio2 Stripmine	and Krastorio2 Truce by Quezler
+    - Added back data-updates.lua for 415 and 975 recipes with the electric boiler
+  Fixes
+    - changed a line from K2SETweaks to TanksK2+SETweaks
+    - changed paths for Krastorio Tank Graphics
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 01-06-2021
+  Changes:
+    - Forked from Xon's K2SETweaks
+    - Removed changes made in data-updates.lua due to being added to base K2 and belt change being a little cheaty 
+---------------------------------------------------------------------------------------------------
