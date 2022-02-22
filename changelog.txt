@@ -2,7 +2,8 @@
 Version: 0.2.2
 Date: 02-19-2022
   Changes: 
-   - Added Fuel value to Hydrogen. Idealy only use usefull if there is excess to be used. 
+   - Added Fuel value to Hydrogen. Idealy only use usefull if there is excess to be used.
+   - Fix minor crash with extra miner modules if Space Exploration is not present. 
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 02-19-2022

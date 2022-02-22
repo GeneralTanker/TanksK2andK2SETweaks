@@ -101,23 +101,23 @@ end
 
 if mods ["space-exploration"] then
 
-local data_util = require("__space-exploration-postprocess__/data_util")
+  local data_util = require("__space-exploration-postprocess__/data_util")
 
--- K2+SE Mk5 and Mk6 shields 
+  -- K2+SE Mk5 and Mk6 shields 
 
-table.insert(data.raw["energy-shield-equipment"]["energy-shield-mk5-equipment"].categories, "universal-equipment")
-table.insert(data.raw["energy-shield-equipment"]["energy-shield-mk6-equipment"].categories, "universal-equipment")
-
-end
+  table.insert(data.raw["energy-shield-equipment"]["energy-shield-mk5-equipment"].categories, "universal-equipment")
+  table.insert(data.raw["energy-shield-equipment"]["energy-shield-mk6-equipment"].categories, "universal-equipment")
  
--- Krastorio 2 Miner tweaks (from Noble's Space Exploration Tweaks)
+  -- Krastorio 2 Miner tweaks (from Noble's Space Exploration Tweaks)
 
-if settings.startup["noble-se-tweaks-bettermk3"].value == true then
-   data.raw['mining-drill']["kr-electric-mining-drill-mk2"].module_specification.module_slots = 4
---   if settings.startup["aai-wide-drill"].value == true then
-   data.raw['mining-drill']["area-mining-drill"].module_specification.module_slots = 6
---   end
-   data.raw['mining-drill']["kr-electric-mining-drill-mk3"].module_specification.module_slots = 6
+  if settings.startup["noble-se-tweaks-bettermk3"].value == true then
+     data.raw['mining-drill']["kr-electric-mining-drill-mk2"].module_specification.module_slots = 4
+     --   if settings.startup["aai-wide-drill"].value == true then
+     data.raw['mining-drill']["area-mining-drill"].module_specification.module_slots = 6
+     --   end
+     data.raw['mining-drill']["kr-electric-mining-drill-mk3"].module_specification.module_slots = 6
+  end
+
 end
 
 -- K2+SE Tech Fix
