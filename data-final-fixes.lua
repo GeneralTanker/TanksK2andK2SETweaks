@@ -180,8 +180,6 @@ if mods ["space-exploration"] then
     
   end
 
-  if mods ["space-exploration"] then
-
   -- SE subgroup fixes
 
   local data_util = require("__space-exploration-postprocess__/data_util")
