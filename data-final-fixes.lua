@@ -118,119 +118,119 @@ if mods ["space-exploration"] then
      data.raw['mining-drill']["kr-electric-mining-drill-mk3"].module_specification.module_slots = 6
   end
 
-end
 
--- K2+SE Tech Fix
 
-   -- Electric energy distribution 3
+  -- K2+SE Tech Fix
 
-    if krastorio.general.getSafeSettingValue("kr-substation-mk2") then
+    -- Electric energy distribution 3
+
+      if krastorio.general.getSafeSettingValue("kr-substation-mk2") then
+      
+        data.raw.technology["electric-energy-distribution-3"].unit.ingredients = {
+            {"production-science-pack", 1},
+            {"utility-science-pack", 1},
+            {"se-rocket-science-pack", 1} 
+          }
+          --data.raw.technology["electric-energy-distribution-3"].unit.count = 300
+          data.raw.technology["electric-energy-distribution-3"].prerequisites = {
+            "electric-energy-distribution-2",
+          "kr-imersium-processing"
+          }
+      
+    end
+
+  -- Other mods that addon to K2 or support K2
+
+      if mods ["Krastorio2-more-locomotives"] then
+
+          data.raw.technology["kr-fusion-locomotive"].unit.ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1},
+            {"production-science-pack", 1},
+        {"se-energy-science-pack-3", 1}
+          }
+          --data.raw.technology["kr-fusion-locomotive"].unit.count = 500
+          data.raw.technology["kr-fusion-locomotive"].prerequisites = {
+            "fusion-reactor-equipment",
+  --		  "railway",
+  --		  "production-science-pack",
+        "kr-ai-core"
+          }
+
+    end
+
+    --Rich rocks processing
+
+  if mods ["Rich-Rocks-Requiem"] then
+
+      if settings.startup["early-rich-rocks-processing"] == true then
+
+          data.raw.technology["rrr-rich-rocks-processing"].unit.ingredients = {
+            {"automation-science-pack", 1},
+            {"logistic-science-pack", 1},
+            {"chemical-science-pack", 1} 
+          }
+          data.raw.technology["rrr-rich-rocks-processing"].unit.count = 550
+          data.raw.technology["rrr-rich-rocks-processing"].prerequisites = {
+            "kr-advanced-chemistry"
+          }
+
+    end
     
-     	data.raw.technology["electric-energy-distribution-3"].unit.ingredients = {
-           {"production-science-pack", 1},
-           {"utility-science-pack", 1},
-           {"se-rocket-science-pack", 1} 
-         }
-         --data.raw.technology["electric-energy-distribution-3"].unit.count = 300
-         data.raw.technology["electric-energy-distribution-3"].prerequisites = {
-          "electric-energy-distribution-2",
-	      "kr-imersium-processing"
-         }
-    
-	end
+  end
 
--- Other mods that addon to K2 or support K2
+  if mods ["space-exploration"] then
 
-    if mods ["Krastorio2-more-locomotives"] then
+  -- SE subgroup fixes
 
-         data.raw.technology["kr-fusion-locomotive"].unit.ingredients = {
-           {"automation-science-pack", 1},
-           {"logistic-science-pack", 1},
-           {"chemical-science-pack", 1},
-           {"production-science-pack", 1},
-		   {"se-energy-science-pack-3", 1}
-         }
-         --data.raw.technology["kr-fusion-locomotive"].unit.count = 500
-         data.raw.technology["kr-fusion-locomotive"].prerequisites = {
-          "fusion-reactor-equipment",
---		  "railway",
---		  "production-science-pack",
-		  "kr-ai-core"
-         }
+  local data_util = require("__space-exploration-postprocess__/data_util")
+  local types = {"item", "item-with-entity-data", "rail-planner", "capsule"}
 
-   end
-
-   --Rich rocks processing
-
-if mods ["Rich-Rocks-Requiem"] then
-
-    if settings.startup["early-rich-rocks-processing"] == true then
-
-         data.raw.technology["rrr-rich-rocks-processing"].unit.ingredients = {
-           {"automation-science-pack", 1},
-           {"logistic-science-pack", 1},
-           {"chemical-science-pack", 1} 
-         }
-         data.raw.technology["rrr-rich-rocks-processing"].unit.count = 550
-         data.raw.technology["rrr-rich-rocks-processing"].prerequisites = {
-          "kr-advanced-chemistry"
-         }
-
-   end
-   
-end
-
-if mods ["space-exploration"] then
-
--- SE subgroup fixes
-
-local data_util = require("__space-exploration-postprocess__/data_util")
-local types = {"item", "item-with-entity-data", "rail-planner", "capsule"}
-
-local function change_subgroup (name, subgroup, order)
-  for _, type in pairs(types) do
-    if data.raw[type][name] then
-      data.raw[type][name].subgroup = subgroup
-      if order then
-        data.raw[type][name].order = order
+  local function change_subgroup (name, subgroup, order)
+    for _, type in pairs(types) do
+      if data.raw[type][name] then
+        data.raw[type][name].subgroup = subgroup
+        if order then
+          data.raw[type][name].order = order
+        end
       end
     end
   end
-end
 
--- K2 Shelter 
+  -- K2 Shelter 
 
-if mods ["aai-containers"] then
+  if mods ["aai-containers"] then
 
-   change_subgroup("kr-shelter","container-1")
-   
-end
+    change_subgroup("kr-shelter","container-1")
+    
+  end
 
--- Pipes and Tanks
+  -- Pipes and Tanks
 
-change_subgroup("kr-steel-pipe", "pipe")
-change_subgroup("kr-steel-pipe-to-ground", "pipe")
-change_subgroup("kr-steel-pump", "pipe")
-change_subgroup("kr-fluid-storage-1", "pipe")
-change_subgroup("kr-fluid-storage-2", "pipe")
+  change_subgroup("kr-steel-pipe", "pipe")
+  change_subgroup("kr-steel-pipe-to-ground", "pipe")
+  change_subgroup("kr-steel-pump", "pipe")
+  change_subgroup("kr-fluid-storage-1", "pipe")
+  change_subgroup("kr-fluid-storage-2", "pipe")
 
 
--- Chemistry 
+  -- Chemistry 
 
-change_subgroup("kr-electrolysis-plant", "chemistry")
-change_subgroup("kr-filtration-plant", "chemistry")
-change_subgroup("kr-atmospheric-condenser", "chemistry")
-change_subgroup("kr-fluid-burner", "chemistry")
-change_subgroup("kr-advanced-chemical-plant", "chemistry")
-change_subgroup("kr-fuel-refinery", "chemistry")
+  change_subgroup("kr-electrolysis-plant", "chemistry")
+  change_subgroup("kr-filtration-plant", "chemistry")
+  change_subgroup("kr-atmospheric-condenser", "chemistry")
+  change_subgroup("kr-fluid-burner", "chemistry")
+  change_subgroup("kr-advanced-chemical-plant", "chemistry")
+  change_subgroup("kr-fuel-refinery", "chemistry")
 
--- Crusher
+  -- Crusher
 
-change_subgroup("kr-crusher", "mechanical")
+  change_subgroup("kr-crusher", "mechanical")
 
--- Lab
+  -- Lab
 
-change_subgroup("kr-research-server", "lab")
-change_subgroup("kr-quantum-computer", "lab")
+  change_subgroup("kr-research-server", "lab")
+  change_subgroup("kr-quantum-computer", "lab")
 
 end
