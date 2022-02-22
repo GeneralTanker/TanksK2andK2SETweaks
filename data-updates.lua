@@ -116,7 +116,18 @@ if mods["Companion_Drones"] then
 
   krastorio.entities.addFuelCategory("spider-vehicle", "companion", "vehicle-fuel")
   
-  end
-  
+end
+
   -- krastorio.general.getSafeSettingValue("kr-rebalance-vehicles&fuels")
   --data.raw["spider-vehicle"]["companion"].burner.fuel_categories = { "chemical", "vehicle-fuel" }
+
+
+-- Hydrogen Fuel 
+
+if data.raw.fluid["hydrogen"] then
+  data.raw.fluid["hydrogen"].fuel_value = "100KJ"
+  data.raw.fluid["hydrogen"].emissions_multiplier = 1.00
+ 
+end
+
+
