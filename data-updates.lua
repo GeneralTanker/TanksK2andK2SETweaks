@@ -129,5 +129,3 @@ if data.raw.fluid["hydrogen"] then
   data.raw.fluid["hydrogen"].emissions_multiplier = 0.50
  
 end
-
-
