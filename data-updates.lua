@@ -125,7 +125,7 @@ end
 -- Hydrogen Fuel 
 
 if data.raw.fluid["hydrogen"] then
-  data.raw.fluid["hydrogen"].fuel_value = "50KJ"
+  data.raw.fluid["hydrogen"].fuel_value = "200KJ"
   data.raw.fluid["hydrogen"].emissions_multiplier = 0.50
  
 end
